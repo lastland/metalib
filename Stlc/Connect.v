@@ -27,12 +27,9 @@
  *)
 
 Require Import String.
-Require Import Metalib.Metatheory.
 
 Require Import Stlc.Nominal.
-Require Import Stlc.Lemmas.
-
-Import StlcNotations.
+Require Import Stlc.Notations.
 
 (***********************************************************************)
 (** ** Translating nominal terms to LN terms *)

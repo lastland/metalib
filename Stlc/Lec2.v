@@ -5,11 +5,7 @@
 (*************************************************************************)
 
 Require Import String.
-Require Import Metalib.Metatheory.
-Require Import Stlc.Definitions.
-Import StlcNotations.
-
-Require Import Stlc.Lemmas.
+Require Import Stlc.Notations.
 
 Require Import Stlc.Lec1.
 

@@ -1,6 +1,7 @@
 -R . Stlc
-Definitions.v
-Lemmas.v
+Stlc.v
+Stlc_inf.v
+Notations.v
 Lec1.v
 Lec1_full.v
 Lec1_sol.v
@@ -13,5 +14,3 @@ Nominal.v
 Connect_full.v
 Connect_sol.v
 Connect.v
-Stlc.v
-Stlc_inf.v

@@ -31,9 +31,6 @@ Stlc_inf.v: stlc.ott gen.mk
 	lngen --coq-no-proofs --coq Stlc_inf.v --coq-ott Stlc stlc.ott
 	make -f gen.mk METALIB.FIX_Stlc_inf
 
-# Target to be called with some filename appended to it
-# It is a quick hack to fix the imports to metalib
+# Strip the Ott-generated comment on the first line
 METALIB.FIX_%:
-	sed -i -e 's/Metatheory/Metalib.Metatheory/g' $*.v
-	sed -i -e 's/LibLNgen/Metalib.LibLNgen/g' $*.v
 	sed '1d' $*.v > __TMP__; mv __TMP__ $*.v

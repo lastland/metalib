@@ -4,15 +4,7 @@
 (*                                                                       *)
 (*************************************************************************)
 
-Require Import Metalib.Metatheory.
-
-(** Next, we import the definitions of the simply-typed lambda calculus. *)
-Require Import Stlc.Definitions.
-
-(** And some auxiliary lemmas about these definitions. *)
-Require Import Stlc.Lemmas.
-
-Import StlcNotations.
+Require Import Stlc.Notations.
 
 (* This file draws heavily on the generated lemmas in Stlc.Lemmas. *)
 

@@ -2,15 +2,15 @@ Require Import Metalib.Metatheory.
 (** syntax *)
 Definition index : Set := nat.
 
-Inductive typ : Set :=  (*r types *)
- | typ_base : typ (*r base type *)
- | typ_arrow (T1:typ) (T2:typ) (*r function types *).
+Inductive typ : Set :=  (* types *)
+ | typ_base : typ (* base type *)
+ | typ_arrow (T1:typ) (T2:typ) (* function types *).
 
-Inductive exp : Set :=  (*r expressions *)
- | var_b (_:nat) (*r variables *)
- | var_f (x:var) (*r variables *)
- | abs (e:exp) (*r abstractions *)
- | app (e1:exp) (e2:exp) (*r applications *).
+Inductive exp : Set :=  (* expressions *)
+ | var_b (_:nat) (* variables *)
+ | var_f (x:var) (* variables *)
+ | abs (e:exp) (* abstractions *)
+ | app (e1:exp) (e2:exp) (* applications *).
 
 Definition ctx : Set := list ( atom * typ ).
 
@@ -36,7 +36,7 @@ end.
 Definition open_exp_wrt_exp e_5 e__6 := open_exp_wrt_exp_rec 0 e__6 e_5.
 
 (** terms are locally-closed pre-terms *)
-(** definitions *)
+(* definitions *)
 
 (* defns LC_exp *)
 Inductive lc_exp : exp -> Prop :=    (* defn lc_exp *)
@@ -80,7 +80,7 @@ Notation open e1 e2     := (open_exp_wrt_exp e1 e2).
 End StlcNotations.
 
 
-(** definitions *)
+(* definitions *)
 
 (* defns JTyping *)
 Inductive typing : ctx -> exp -> typ -> Prop :=    (* defn typing *)

@@ -134,11 +134,7 @@ Require Import Metalib.Metatheory.
     If you haven't skimmed this file yet, you should do so now. You don't
     need to understand everything in the file at first, but you will need to
     refer back to it in the material below. *)
-Require Import Stlc.Definitions.
-
-(** And some notations (defined in `Stlc.Definitions`), but not automatically
-    brought into scope. *)
-Import StlcNotations.
+Require Import Stlc.Notations.
 
 (** Make the Case tactic available. *)
 Require Import String.
@@ -787,9 +783,6 @@ Lemma typing_to_lc_exp : forall E e T,
 Proof.
   (* ADMITTED *)
   intros E e T H. induction H; eauto.
-  pick fresh x1 for L.
-  apply (lc_abs_exists x1).
-  auto.
 Qed.
 (* /ADMITTED *)
 
